@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Bessonova483_API_Network</string>
+    <string name="TVLogin">Log In</string>
+    <string name="tvlog">Login</string>
+    <string name="TvPas">Password</string>
+    <string name="chBoxSavePas">Save password</string>
+    <string name="btnEnter">Enter</string>
+    <string name="btnRegister">Register</string>
+    <string name="btnOK">OK</string>
+    <string name="btnCancel">Cancel</string>
+    <string name="TVReg">Registration</string>
+    <string name="BtnChangeAPIAddress">Change API Address</string>
+    <string name="TVChangeAPI">Changing API Address</string>
+    <string name="TVAPI">API address</string>
+    <string name="TVMainMenu">Main menu</string>
+    <string name="BtnViewMapList">View map list</string>
+    <string name="BtnLogOut">Log out</string>
+    <string name="BtnUpdateUser">Update User\'s data</string>
+</resources>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3B4735"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".ChangeAPIAddressActivity">
+
+    <TextView
+        android:id="@+id/TVChangeAPI"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/TVChangeAPI" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvAPI"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/TVAPI" />
+
+        <EditText
+            android:id="@+id/EditAPI"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="textPersonName" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/bTNOK"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onOKClick"
+        android:text="@string/btnOK" />
+
+    <Button
+        android:id="@+id/BtnCancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onCancelClick"
+        android:text="@string/btnCancel" />
+</LinearLayout>
