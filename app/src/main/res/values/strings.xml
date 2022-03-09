@@ -16,4 +16,7 @@
     <string name="BtnViewMapList">View map list</string>
     <string name="BtnLogOut">Log out</string>
     <string name="BtnUpdateUser">Update User\'s data</string>
+    <string name="btnSessions">See sessions</string>
+    <string name="BtnAddMap">Add new map</string>
+    <string name="btnBack">Go back</string>
 </resources>

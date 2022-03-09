@@ -4,13 +4,20 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 public class MainActivity extends AppCompatActivity {
 
 EditText log, pas;
 String APIAddress;
+    Toast msgerr;
+    String token;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,12 +28,44 @@ String APIAddress;
         pas = findViewById(R.id.EditTxtPas);
         Intent iAddress = getIntent();
         APIAddress = iAddress.getStringExtra("API address");
+        msgerr=Toast.makeText(this, "", Toast.LENGTH_SHORT);
     }
 
-    public void onEnterClick(View v){
+    public void onEnterClick(View v)throws JSONException {
+        Intent iLogIn = new Intent(this, MainMenuActivity.class);
+        APIClass req = new APIClass(this) {
 
-Intent iEnter = new Intent(this, MainMenuActivity.class);
-startActivity(iEnter);
+            @Override
+            public void onError() {
+                msgerr.setText("Request failed!");
+                msgerr.show();
+            }
+
+            @Override
+            public void onSuccess(String data) {
+
+                if (data == "null") {
+                    msgerr.setText("Invalid credentials!");
+                    msgerr.show();
+                } else {
+                    token = data.replace("\"", "");
+                    Log.i("API", "token=" + token);
+
+                    iLogIn.putExtra("tok", token);
+                    startActivity(iLogIn);
+
+
+                }
+            }
+        };
+        JSONObject obj = new JSONObject();
+        obj.put("usr", log.getText().toString());
+        obj.put("pass", pas.getText().toString());
+
+
+        String payload=obj.toString();
+        req.Post("http://v1.fxnode.ru:8081/rpc/open_session", payload);
+
     }
 
     public void onRegisterClick(View v){

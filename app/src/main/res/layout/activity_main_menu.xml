@@ -29,11 +29,11 @@
             android:text="@string/BtnViewMapList" />
 
         <Button
-            android:id="@+id/btnUpdateUser"
+            android:id="@+id/btnSession"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="onUpdateUserClick"
-            android:text="@string/BtnUpdateUser" />
+            android:onClick="onSessionsClick"
+            android:text="@string/btnSessions" />
 
         <Button
             android:id="@+id/btnLogOut"

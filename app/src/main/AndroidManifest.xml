@@ -12,7 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Bessonova483_API_Network">
         <activity
-            android:name=".UpdateUserActivity"
+            android:name=".SessionsListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UpdateMap"
             android:exported="true" />
         <activity
             android:name=".ListMapsActivity"
