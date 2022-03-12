@@ -19,4 +19,6 @@
     <string name="btnSessions">See sessions</string>
     <string name="BtnAddMap">Add new map</string>
     <string name="btnBack">Go back</string>
+    <string name="TVnewmap">Creating new map</string>
+    <string name="TvMapName">Map name</string>
 </resources>

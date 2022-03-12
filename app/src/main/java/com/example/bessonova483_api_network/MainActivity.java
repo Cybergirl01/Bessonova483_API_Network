@@ -51,7 +51,7 @@ String APIAddress;
                     token = data.replace("\"", "");
                     Log.i("API", "token=" + token);
 
-                    iLogIn.putExtra("tok", token);
+                    iLogIn.putExtra("token", token);
                     startActivity(iLogIn);
 
 

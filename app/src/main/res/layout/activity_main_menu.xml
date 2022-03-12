@@ -22,7 +22,7 @@
         android:orientation="vertical">
 
         <Button
-            android:id="@+id/btnViewMapList"
+            android:id="@+id/btnMapList"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="onViewListClick"

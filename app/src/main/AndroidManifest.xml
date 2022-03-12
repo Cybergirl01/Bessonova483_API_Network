@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Bessonova483_API_Network">
         <activity
+            android:name=".ViewNodesInMapActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CreateMapActivity"
+            android:exported="false" />
+        <activity
             android:name=".SessionsListActivity"
             android:exported="false" />
         <activity

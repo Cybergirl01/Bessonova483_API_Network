@@ -23,7 +23,7 @@ public class APIClass {
     public void Post(String endpoint, String payload){
         Thread t = new Thread(()-> {
             try{
-                Log.e("123", payload);
+                Log.e("1234", payload);
                 URL url = new URL(endpoint);
                 HttpURLConnection con = (HttpURLConnection) url.openConnection();
                 con.setRequestMethod("POST");

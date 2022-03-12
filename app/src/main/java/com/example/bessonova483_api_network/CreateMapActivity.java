@@ -11,22 +11,23 @@ import android.widget.Toast;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class RegisterActivity extends AppCompatActivity {
-    EditText log, pas;
+public class CreateMapActivity extends AppCompatActivity {
+EditText mapname;
     Toast msgerr;
-    String Usr, pass;
-
+    String name;
+    String token;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register);
-        log = findViewById(R.id.EditTxtLog);
-        pas = findViewById(R.id.EditTxtPas);
-        msgerr=Toast.makeText(this, "", Toast.LENGTH_SHORT);
+        setContentView(R.layout.activity_mapcreate);
+        mapname = findViewById(R.id.EDItTxtmapname);
+        Intent iAddmap = getIntent();
+        token = iAddmap.getStringExtra("token");
     }
 
-    public void onOKclick (View v)throws JSONException {
-        Intent i = new Intent(this, MainActivity.class);
+    public void onAddMapClick(View v)
+    {
+        Intent ilistmap = new Intent(this, ListMapsActivity.class);
         APIClass req = new APIClass(this) {
 
             @Override
@@ -42,26 +43,33 @@ public class RegisterActivity extends AppCompatActivity {
                     msgerr.setText("Invalid credentials!");
                     msgerr.show();
                 } else {
-                    Usr = data.replace("\"", "");
-                    pass = data.replace("\"", "");
-                    startActivity(i);
+                    token = data.replace("\"", "");
+                    name = data.replace("\"", "");
+                    startActivity(ilistmap);
 
 
                 }
             }
         };
         JSONObject obj = new JSONObject();
-        obj.put("usr", log.getText().toString());
-        obj.put("pass", pas.getText().toString());
 
+        try {
+            obj.put("mname", mapname.getText().toString());
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        try {
+            obj.put("tok", token);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
 
         String payload=obj.toString();
-        req.Post("http://v1.fxnode.ru:8081/rpc/add_account", payload);
+        req.Post("http://v1.fxnode.ru:8081/rpc/add_map", payload);
     }
 
     public void onCancelClick(View v){
-        Intent iBack = new Intent(this, MainActivity.class);
+        Intent iBack = new Intent(this, ListMapsActivity.class);
         startActivity(iBack);
     }
-
 }

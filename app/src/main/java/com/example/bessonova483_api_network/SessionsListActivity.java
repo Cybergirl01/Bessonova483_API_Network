@@ -23,10 +23,10 @@ public class SessionsListActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sessions_list);
-        ArrayList<String> list = new ArrayList<String>();
-        token = getIntent().getStringExtra("tok");
+        ArrayList<String> listSessions = new ArrayList<String>();
+        token = getIntent().getStringExtra("token");
         msgerr=Toast.makeText(this, "", Toast.LENGTH_SHORT);
-
+        listSessions.clear();
         JSONObject obj = new JSONObject();
         APIClass req = new APIClass(this) {
 
@@ -58,8 +58,8 @@ public class SessionsListActivity extends AppCompatActivity {
             {
                 int len = array.length();
                 for(int i=0;i<len;i++){
-                    list.add(array.get(i).toString());
-                    ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, list);
+                    listSessions.add(array.get(i).toString());
+                    ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, listSessions);
                     lv.setAdapter(adapter);
 
                 }

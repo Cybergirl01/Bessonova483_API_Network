@@ -19,7 +19,7 @@ String token;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
         Intent itoken = getIntent();
-        token = itoken.getStringExtra("tok");
+        token = itoken.getStringExtra("token");
     }
 
     public void onLogOutClick(View v)throws JSONException {
@@ -60,13 +60,9 @@ String token;
         startActivity(iViewList);
     }
 
-    public void onUpdateUserClick(View v){
-        Intent iUpdate = new Intent(this, UpdateMap.class);
-        startActivity(iUpdate);
-    }
     public void onSessionsClick(View v){
         Intent iSessions = new Intent(this, SessionsListActivity.class);
-        iSessions.putExtra("tok", token);
+        iSessions.putExtra("token", token);
         startActivity(iSessions);
     }
 }

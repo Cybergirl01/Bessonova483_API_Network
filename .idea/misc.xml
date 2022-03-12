@@ -3,12 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Bessonova483_API_Network/app/src/main/res/layout/activity_list_maps.xml" value="0.171875" />
-        <entry key="..\:/Bessonova483_API_Network/app/src/main/res/layout/activity_main.xml" value="0.19636363210756924" />
-        <entry key="..\:/Bessonova483_API_Network/app/src/main/res/layout/activity_main_menu.xml" value="0.171875" />
-        <entry key="..\:/Bessonova483_API_Network/app/src/main/res/layout/activity_register.xml" value="0.171875" />
+        <entry key="..\:/Bessonova483_API_Network/app/src/main/res/layout/activity_list_maps.xml" value="0.21818181345285476" />
+        <entry key="..\:/Bessonova483_API_Network/app/src/main/res/layout/activity_main.xml" value="0.21818181345285476" />
+        <entry key="..\:/Bessonova483_API_Network/app/src/main/res/layout/activity_main_menu.xml" value="0.21818181345285476" />
+        <entry key="..\:/Bessonova483_API_Network/app/src/main/res/layout/activity_map.xml" value="0.171875" />
+        <entry key="..\:/Bessonova483_API_Network/app/src/main/res/layout/activity_mapcreate.xml" value="0.21818181345285476" />
+        <entry key="..\:/Bessonova483_API_Network/app/src/main/res/layout/activity_register.xml" value="0.19636363210756924" />
         <entry key="..\:/Bessonova483_API_Network/app/src/main/res/layout/activity_sessions_list.xml" value="0.171875" />
         <entry key="..\:/Bessonova483_API_Network/app/src/main/res/layout/activity_update_user.xml" value="0.171875" />
+        <entry key="..\:/Bessonova483_API_Network/app/src/main/res/layout/activity_view_nodes_in_map.xml" value="0.171875" />
         <entry key="..\:/Users/user/Bessonova483_API_Network/app/src/main/res/layout/activity_change_apiaddress.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/user/Bessonova483_API_Network/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/user/Bessonova483_API_Network/app/src/main/res/layout/activity_main_menu.xml" value="0.36666666666666664" />
