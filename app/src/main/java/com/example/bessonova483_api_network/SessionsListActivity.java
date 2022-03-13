@@ -51,7 +51,7 @@ public class SessionsListActivity extends AppCompatActivity {
 
 
         try {
-            obj.put("skey",token);
+            obj.put("tok",token);
 
             JSONArray array = new JSONArray(obj);
             if(array !=null)

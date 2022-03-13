@@ -32,9 +32,10 @@ public class ListMapsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_maps);
-        ArrayList<String> listmaps = new ArrayList<String>();
         token = getIntent().getStringExtra("token");
         msgerr=Toast.makeText(this, "", Toast.LENGTH_SHORT);
+        lv = findViewById(R.id.maplist);
+        ArrayList<String> listmaps = new ArrayList<String>();
 listmaps.clear();
         JSONObject obj = new JSONObject();
         APIClass req = new APIClass(this) {
@@ -60,7 +61,7 @@ listmaps.clear();
 
 
         try {
-            obj.put("skey",token);
+            obj.put("tok",token);
 
             JSONArray array = new JSONArray(obj);
             if(array !=null)

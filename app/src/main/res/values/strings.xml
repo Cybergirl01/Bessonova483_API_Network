@@ -21,4 +21,11 @@
     <string name="btnBack">Go back</string>
     <string name="TVnewmap">Creating new map</string>
     <string name="TvMapName">Map name</string>
+    <string name="btnAddnode">Add new node</string>
+    <string name="Tvcreatenewnode">Creating new node</string>
+    <string name="TVnodename">Node name</string>
+    <string name="TVIP">IP address</string>
+    <string name="TVX">X</string>
+    <string name="TVY">Y</string>
+    <string name="tvAgent">Agent name</string>
 </resources>

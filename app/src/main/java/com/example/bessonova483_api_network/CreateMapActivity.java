@@ -20,7 +20,7 @@ EditText mapname;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mapcreate);
-        mapname = findViewById(R.id.EDItTxtmapname);
+        mapname = findViewById(R.id.EDItTxtnodename);
         Intent iAddmap = getIntent();
         token = iAddmap.getStringExtra("token");
     }
